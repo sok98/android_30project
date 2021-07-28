@@ -1,6 +1,6 @@
 # 🗂 fastcampus 온라인 강의 프로젝트 코드 모음
 
-30개 프로젝트로 배우는 Android 앱 개발 with Kotlin 초격차 패키지 Online.
+> 30개 프로젝트로 배우는 Android 앱 개발 with Kotlin 초격차 패키지 Online.
 
 - [x]  1. BMI 계산기
 - [ ]  2. 로또 번호 추첨기
