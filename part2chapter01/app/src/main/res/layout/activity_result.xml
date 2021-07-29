@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BMI : "
+            android:text="BMI 지수는 "
             android:textSize="20sp" />
 
         <TextView
@@ -23,7 +23,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:textStyle="bold"
             tools:text="23.111" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 이며,"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -44,7 +51,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            tools:text="정상 체중 입니다." />
+            android:textStyle="bold"
+            tools:text="정상 체중" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 입니다."
+            android:textSize="20sp" />
 
     </LinearLayout>
 
