@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3B65AE"
+    tools:context="com.yeseul.part2.chapter03.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="The Secret Garden"
+        android:fontFamily="@font/poet_with_me"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/passwordLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/openButton"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:background="#A1A1A1"
+            app:layout_constraintBottom_toBottomOf="@+id/numberPicker1"
+            app:layout_constraintEnd_toStartOf="@+id/numberPicker1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/numberPicker1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/changPasswordButton"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/openButton"
+            app:layout_constraintStart_toStartOf="@+id/openButton"
+            app:layout_constraintTop_toBottomOf="@+id/openButton" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker1"
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:background="#A8A8A8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/numberPicker2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/openButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker2"
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:background="#A8A8A8"
+            app:layout_constraintEnd_toStartOf="@+id/numberPicker3"
+            app:layout_constraintStart_toEndOf="@+id/numberPicker1"
+            app:layout_constraintTop_toTopOf="@+id/numberPicker1" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker3"
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:background="#A8A8A8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/numberPicker2"
+            app:layout_constraintTop_toTopOf="@+id/numberPicker1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
