@@ -5,9 +5,15 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
+import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
+import androidx.room.Room
+import com.yeseul.part2.chapter04.model.History
 
 class MainActivity : AppCompatActivity() {
     private val expressionTextView: TextView by lazy {
@@ -18,12 +24,28 @@ class MainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.resultTextView)
     }
 
+    private val historyLayout: View by lazy {
+        findViewById<View>(R.id.historyLayout)
+    }
+
+    private val historyLinearLayout: LinearLayout by lazy {
+        findViewById<LinearLayout>(R.id.historyLinearLayout)
+    }
+
+    lateinit var db : AppDatabase
+
     private var isOperator = false  // 연산자 입력중
     private var hasOperator = false // 연산자 입력 완료
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java,
+            "historyDB"
+        ).build()
     }
 
     fun buttonClicked(v: View) {
@@ -133,6 +155,11 @@ class MainActivity : AppCompatActivity() {
         val expressionText = expressionTextView.text.toString()
         val resultText = calculateExpression()
 
+        Thread(Runnable {
+            Log.d("historyADD", "히스토리에 추가 $db")
+            db.historyDao().insertHistory(History(null, expressionText, resultText))
+        }).start()
+
         resultTextView.text = ""
         expressionTextView.text = resultText
 
@@ -163,17 +190,38 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    fun historyButtonClicked(v: View) {
-//
-//    }
-//
-//    fun closeHistoryButtonClicked(v: View) {
-//
-//    }
-//
-//    fun HistoryClearButtonClicked(v: View) {
-//
-//    }
+    fun historyButtonClicked(v: View) {
+        historyLayout.isVisible = true
+        historyLinearLayout.removeAllViews()
+        Log.d("historyADD", "히스토리 버튼 클릭")
+
+        Thread(Runnable {
+            Log.d("historyADD", "스레드 실행")
+
+            db.historyDao().getAll().reversed().forEach{
+                runOnUiThread{
+                    val historyView = LayoutInflater.from(this).inflate(R.layout.history_row, null, false)
+                    historyView.findViewById<TextView>(R.id.expressionTextView).text = it.expression
+                    historyView.findViewById<TextView>(R.id.resultTextView).text = "= ${it.result}"
+
+                    Log.d("historyADD", "히스토리 내용 : ${it.expression} = ${it.result}")
+
+                    historyLinearLayout.addView(historyView)
+                }
+            }
+        }).start()
+    }
+
+    fun closeHistoryButtonClicked(v: View) {
+        historyLayout.isVisible = false
+    }
+
+    fun historyClearButtonClicked(v: View) {
+        historyLinearLayout.removeAllViews()
+        Thread(Runnable {
+            db.historyDao().deleteAll()
+        }).start()
+    }
 }
 
 fun String.isNumber(): Boolean {

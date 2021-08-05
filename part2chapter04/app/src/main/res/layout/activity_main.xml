@@ -355,7 +355,7 @@
             android:layout_marginEnd="47dp"
             android:layout_marginBottom="38dp"
             android:background="@drawable/button_background_green"
-            android:onClick="HistoryClearButtonClicked"
+            android:onClick="historyClearButtonClicked"
             android:stateListAnimator="@null"
             android:text="계산 기록 삭제"
             android:textColor="@color/white"
