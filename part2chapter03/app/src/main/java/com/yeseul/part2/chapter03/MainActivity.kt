@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
             val passwordFromUser = "${numberPicker1.value}${numberPicker2.value}${numberPicker3.value}"
 
             if(passwordPreferences.getString("password", "000").equals(passwordFromUser)) {
+                Toast.makeText(this, "잠금이 해제되었습니다.", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, DiaryActivity::class.java))
             } else {    //암호해제 실패
                 showErrorAlertDialog()
