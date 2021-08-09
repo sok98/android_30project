@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "111381068551",
+    "project_id": "aop-part3-chapter01-cb834",
+    "storage_bucket": "aop-part3-chapter01-cb834.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111381068551:android:7c198fc15fd6b8e28b23a2",
+        "android_client_info": {
+          "package_name": "com.yeseul.part3.chapter01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111381068551-hndssu3iioag4tmepbf5t90mm7qdvu0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtdIrMJXXQbiZnIYjR3IzUklM_AQsEODA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111381068551-hndssu3iioag4tmepbf5t90mm7qdvu0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
