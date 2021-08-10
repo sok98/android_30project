@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="12dp"
-        android:textSize="16sp"
+        android:textSize="18sp"
         tools:text="결과값입니다." />
 
     <TextView

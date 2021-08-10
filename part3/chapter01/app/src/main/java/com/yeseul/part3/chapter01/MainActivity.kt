@@ -44,9 +44,9 @@ class MainActivity : AppCompatActivity() {
     private fun updateResult(isNewIntent: Boolean = false) {
         resultTextView.text = (intent.getStringExtra("notificationType") ?: "앱 런처") +
         if(isNewIntent) {
-            "(으)로 갱신했습니다."
+            "(으)로 갱신되었습니다."
         } else {
-            "(으)로 실행했습니다."
+            "(으)로 실행합니다."
         }
     }
 }
