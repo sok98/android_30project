@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Project code/fastcampus_aop30/part3/chapter04/app/src/main/res/drawable/background_gray_stroke_radius_8.xml" value="0.28802083333333334" />
+        <entry key="..\:/Project code/fastcampus_aop30/part3/chapter04/app/src/main/res/layout/activity_detail.xml" value="0.2703804347826087" />
         <entry key="..\:/Project code/fastcampus_aop30/part3/chapter04/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Project code/fastcampus_aop30/part3/chapter04/app/src/main/res/layout/item_book.xml" value="0.4" />
+        <entry key="..\:/Project code/fastcampus_aop30/part3/chapter04/app/src/main/res/layout/item_history.xml" value="0.264" />
       </map>
     </option>
   </component>
