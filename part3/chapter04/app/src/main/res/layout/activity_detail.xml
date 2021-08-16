@@ -51,7 +51,7 @@
             <EditText
                 android:id="@+id/reviewEditText"
                 android:layout_width="0dp"
-                android:layout_height="300dp"
+                android:layout_height="100dp"
                 android:layout_margin="16dp"
                 app:layout_constraintBottom_toTopOf="@id/saveButton"
                 app:layout_constraintEnd_toEndOf="parent"
