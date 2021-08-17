@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.yeseul.part3.chapter05.DBKey.Companion.USERS
+import com.yeseul.part3.chapter05.DBKey.Companion.USER_ID
 import com.yeseul.part3.chapter05.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -129,9 +131,9 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(this, "로그인에 성공하였습니다.", Toast.LENGTH_SHORT).show()
 
         val userId = auth.currentUser?.uid.orEmpty()
-        val currentUserDB = Firebase.database.reference.child("Users").child(userId)
+        val currentUserDB = Firebase.database.reference.child(USERS).child(userId)
         val user = mutableMapOf<String, Any>()
-        user["userId"] = userId
+        user[USER_ID] = userId
         currentUserDB.updateChildren(user)
 
         finish()

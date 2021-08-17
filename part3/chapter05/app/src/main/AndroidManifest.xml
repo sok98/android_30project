@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chapter05">
         <activity
+            android:name=".MatchedUserActivity"
+            android:exported="true" />
+        <activity
             android:name=".LikeActivity"
             android:exported="true" />
         <activity

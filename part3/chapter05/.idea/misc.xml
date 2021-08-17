@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Project code/fastcampus_aop30/part3/chapter05/app/src/main/res/layout/activity_like.xml" value="0.21979166666666666" />
+        <entry key="..\:/Project code/fastcampus_aop30/part3/chapter05/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.2359375" />
+        <entry key="..\:/Project code/fastcampus_aop30/part3/chapter05/app/src/main/res/layout/activity_like.xml" value="0.264" />
         <entry key="..\:/Project code/fastcampus_aop30/part3/chapter05/app/src/main/res/layout/activity_login.xml" value="0.27943840579710144" />
+        <entry key="..\:/Project code/fastcampus_aop30/part3/chapter05/app/src/main/res/layout/activity_matched_user.xml" value="0.21979166666666666" />
         <entry key="..\:/Project code/fastcampus_aop30/part3/chapter05/app/src/main/res/layout/item_card.xml" value="0.264" />
+        <entry key="..\:/Project code/fastcampus_aop30/part3/chapter05/app/src/main/res/layout/item_matched_user.xml" value="0.21979166666666666" />
       </map>
     </option>
   </component>
