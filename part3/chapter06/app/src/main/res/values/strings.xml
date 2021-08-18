@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">chapter06</string>
+    <string name="navi_home">홈</string>
+    <string name="navi_chatList">채팅</string>
+    <string name="navi_myPage">나의 정보</string>
 </resources>
