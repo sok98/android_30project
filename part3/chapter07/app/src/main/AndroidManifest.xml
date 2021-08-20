@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yeseul.part3.chapter07">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +13,7 @@
         android:theme="@style/Theme.Chapter07">
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="0ti8s4kuvy" />
+            android:value="@string/naver_map_client_id" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
